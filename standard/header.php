@@ -2,9 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <title>スタンダードレイアウト</title>
-  <link rel="stylesheet" href="/tasaki/wp-content/themes/standard/css/reset.css">
-  <link rel="stylesheet" href="/tasaki/wp-content/themes/standard/css/style.css">
+	<?php wp_head(); ?>
 </head>
 <body>
   <header class="header">

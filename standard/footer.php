@@ -7,5 +7,6 @@
   </ul>
   <p class="copyright">Copyright © 2015 SAMPLE SITE</p>
 </footer>
+<?php wp_footer(); ?>
 </body>
 </html>
