@@ -6,17 +6,27 @@
 </head>
 <body>
   <header class="header">
-    <h1 class="logo">
-      <a href="/">SAMPLE SITE</a>
+    <h1>
+      <a href="/">
+				<?php
+					if ( has_custom_logo() ) {
+						$custom_logo_id = get_theme_mod( 'custom_logo' );
+						$images = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+						$logo  = '<img src="';
+						$logo .= $images[0] . '" width="';
+						$logo .= $images[1] . '" height="';
+						$logo .= $images[2] . '" alt="">';
+						echo $logo;
+					}
+				?>
+			</a>
     </h1>
     <nav class="global-nav">
-      <ul>
-        <li class="nav-item active"><a href="#">HOME</a></li>
-        <li class="nav-item"><a href="#">ABOUT</a></li>
-        <li class="nav-item"><a href="#">NEWS</a></li>
-        <li class="nav-item"><a href="#">TOPICS</a></li>
-        <li class="nav-item"><a href="#">DOCS</a></li>
-        <li class="nav-item"><a href="#">BLOG</a></li>
-      </ul>
+			<?php
+				$args = array(
+					'theme_location' => 'primary'
+				);
+				wp_nav_menu( $args );
+			?>
     </nav>
   </header>

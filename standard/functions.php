@@ -2,6 +2,22 @@
 function theme_setup() {
 	// タイトルタグを管理画面より設定
 	add_theme_support( 'title-tag' );
+
+	// ロゴを管理画面より設定
+	$args = array(
+		'height'      => 0,
+		'width'       => 0,
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' )
+	);
+	add_theme_support( 'custom-logo', $args );
+
+	// メニューを管理画面に追加
+	$args = array(
+		'primary' => 'global-navigation'
+	);
+	register_nav_menus( $args );
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 
