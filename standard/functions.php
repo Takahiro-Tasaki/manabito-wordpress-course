@@ -26,7 +26,7 @@ function theme_widgets_init() {
 		'name'          => 'Sidebar',
 		'id'            => 'sidebar-1',
 		'description'   => 'サイドバーとして表示するもの',
-		'before_widget' => '<div class="sidemenu">',
+		'before_widget' => '<div id="%1$s" class="sidemenu widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="heading">',
 		'after_title'   => '</h2>'
