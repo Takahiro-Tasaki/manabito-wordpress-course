@@ -1,14 +1,13 @@
 <?php get_header(); ?>
+<?php if ( shortcode_exists( 'wp-structuring-markup-breadcrumb') ) : ?>
 <nav class="nav-breadcrumb">
-	<?php
-		if ( shortcode_exist( 'wp-structuring-markup-breadcrumb') ) {
-			echo do_shortcode( 'wp-structuring-markup-breadcrumb' );
-		}
-	?>
+	<?php echo do_shortcode( '[wp-structuring-markup-breadcrumb]' ); ?>
 </nav>
+<?php endif; ?>
+
 <div class="wrapper clearfix">
 	<main class="main">
-	<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) : the_post(); ?>
 		<article>
 			<?php the_title( '<h1>', '</h1>' ); ?>
 			<div class="post-date">
