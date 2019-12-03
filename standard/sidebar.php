@@ -1,3 +1,4 @@
+<?php do_action( 'sidebar_hook' ); ?>
 <?php dynamic_sidebar( 'sidebar-1' ); ?>
 <div class="sidemenu">
   <h2 class="heading">RANKING</h2>

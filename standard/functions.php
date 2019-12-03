@@ -50,3 +50,13 @@ remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_print_styles',     'print_emoji_styles' );
 remove_action( 'admin_print_styles',  'print_emoji_styles' );
 add_filter( 'emoji_svg_url', '__return_false' );
+
+function theme_the_title( $title ) {
+  return str_replace( '南蛮', '<strong>南蛮</strong>', $title );
+}
+add_action( 'the_title', 'theme_the_title' );
+
+function theme_sidebar_hook() {
+  echo 'フックポイント作成中';
+}
+add_action( 'sidebar_hook', 'theme_sidebar_hook' );
