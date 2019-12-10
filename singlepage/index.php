@@ -14,7 +14,7 @@
     <h2 class="heading">WORKS</h2>
     <div class="works-wrapper">
       <div class="work-box tree">
-        <img class="work-image" src="images/tree.jpg" alt="制作事例1">
+        <img class="work-image" src="<?php echo get_template_directory_uri(); ?>/images/tree.jpg" alt="制作事例1">
         <div class="work-description">
           <div class="work-description-inner">
             <p class="work-text">
@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="work-box building">
-        <img class="work-image" src="images/building.jpg" alt="制作事例2">
+        <img class="work-image" src="<?php echo get_template_directory_uri(); ?>/images/building.jpg" alt="制作事例2">
         <div class="work-description">
           <div class="work-description-inner">
             <p class="work-text">
@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="work-box lake">
-        <img class="work-image" src="images/lake.jpg" alt="制作事例3">
+        <img class="work-image" src="<?php echo get_template_directory_uri(); ?>/images/lake.jpg" alt="制作事例3">
         <div class="work-description">
           <div class="work-description-inner">
             <p class="work-text">
@@ -53,7 +53,7 @@
         </div>
       </div>
       <div class="work-box sky">
-        <img class="work-image" src="images/sky.jpg" alt="制作事例4">
+        <img class="work-image" src="<?php echo get_template_directory_uri(); ?>/images/sky.jpg" alt="制作事例4">
         <div class="work-description">
           <div class="work-description-inner">
             <p class="work-text">
