@@ -101,10 +101,10 @@
   </section>
   <section class="contact" id="contact">
     <h2 class="heading">CONTACT</h2>
-    <form class="contact-form">
-      <input type="text" name="name" placeholder="NAME">
-      <textarea name="message" placeholder="MESSAGE"></textarea>
-      <input type="submit" value="SEND">
-    </form>
+    <?php
+      if ( shortcode_exists( 'contact-form-7') ) {
+        echo do_shortcode( '[contact-form-7 id="40" title="シングルページのフォーム" html_class="contact-form"]' );
+      }
+    ?>
   </section>
   <?php get_footer(); ?>
