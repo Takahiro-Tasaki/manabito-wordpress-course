@@ -22,3 +22,15 @@ function delete_unnecessary() {
   add_filter( 'emoji_svg_url', '__return_false' );
 }
 delete_unnecessary();
+
+function contact_form_complete() {
+  echo '<script>';
+  echo 'document.addEventListener( "wpcf7mailsent", function( event ) {';
+  echo 'var path = "' . home_url( '/' ) .  '";';
+  echo 'if ( "40" == event.detail.contactFormId ) {';
+  echo 'location = path + "contact_complete/#contact_complete";';
+  echo '}';
+  echo '});';
+  echo '</script>';
+}
+add_action( 'wp_footer', 'contact_form_complete' );
