@@ -18,19 +18,9 @@ License: GPLv2 or later
  */
 class Sample_Plugin {
 	public function __construct() {
-		add_action( 'the_title', array( $this, 'set_title' ) );
-		
-		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
-	}
-	
-	/**
-	 * タイトルのセッティング
-	 *
-	 * @param  string $title
-	 * @return string
-	 */
-	public function set_title( $title ) {
-		return '♪( ´▽｀)' . $title;
+		if( is_admin() ) {
+			add_action( 'admin_menu', array( $this, 'admin_menu' ) );
+		}
 	}
 	
 	public function admin_menu () {
